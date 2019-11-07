@@ -1,6 +1,7 @@
 from flask import Flask, render_template,request
 import random
- 
+import requests
+ from pprint import pprint
 
 app = Flask(__name__)
 
@@ -64,18 +65,29 @@ def indian():
     date =request.args.get('date')
     return render_template('indian.html', year=year,month=month,date=date)
 
-@app.route('/indian')
-def indian():
-    return render_template(indian1.html):
+# @app.route('/indian')
+# def indian():
+#     return render_template(indian1.html)
 
-@app.route('/indian_result')
-def result():
-    list_1=['말 많은'],
-    list_2=['늑대'],
-    list_3=['~와 함께 춤을']
+# @app.route('/indian_result')
+# def result():
+#     list_1=['말 많은'],
+#     list_2=['늑대'],
+#     list_3=['~와 함께 춤을']
+#     name = request.args.get("name")
 
-    l1 =random.choice(list_1)
-    l2 = random.choice(list_2)
-    l3 = random.choice(list_3)
+#     l1 =random.choice(list_1)
+#     l2 = random.choice(list_2)
+#     l3 = random.choice(list_3)
+
+  
+
+@app.route('/lotto_num')
+def lotto_num():
+    res = request.get():
+        url = "https://dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=882"
+        res =request.get(url).json()
+        return f'{res}'
+
 if __name__=="__main__":
     app.run(debug=True, port=8000)
