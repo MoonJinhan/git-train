@@ -1,7 +1,7 @@
 from flask import Flask, render_template,request
 import random
 import requests
- from pprint import pprint
+from pprint import pprint
 
 app = Flask(__name__)
 
@@ -80,14 +80,41 @@ def indian():
 #     l2 = random.choice(list_2)
 #     l3 = random.choice(list_3)
 
-  
+@app.route('/lotto_get')
+def lotto_get():
+    return render_template('lotto_get.html')
 
 @app.route('/lotto_num')
 def lotto_num():
-    res = request.get():
-        url = "https://dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=882"
-        res =request.get(url).json()
-        return f'{res}'
+    num = request.args.get("num")
+    url = f"https://dhlottery.co.kr/common.do?method=getLottoNumber&drwNo={num}"
+    res =requests.get(url).json()
+
+    wnum = [ res[f'drwtNo{i}'] for i in range(1,7)]
+
+    #List comprehension
+    #리스트 컴프리 핸션 : [받는 변수 for 받는변수 in 범위로된 데이터] = 받는 변수화 되서 리턴
+
+    print(wnum)
+    lotto =random.sample(range(1,47),6) 
+    match = list(set(wnum) & set(lotto))
+        # & 교집합
+    print(match)
+    # return f'{wnum}'
+    count = len(match)
+    msg =""
+    if count == 6 :
+       msg ="1등 입니다."
+    elif count == 5:
+        msg="2등 입니다."
+    elif count == 4:
+        msg="3등 입니다."
+    else:
+        msg="꽝이다 임마~!"
+
+    return render_template('lotto_result.html',num=num,wnum=wnum,lotto=lotto,msg=msg)
+
+
 
 if __name__=="__main__":
     app.run(debug=True, port=8000)
