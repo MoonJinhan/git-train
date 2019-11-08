@@ -10,6 +10,22 @@ app=Flask(__name__)
 token=config('TOKEN')
 base_url=f"https://api.telegram.org/bot{token}"
 
+# @app.route('/telegram')
+# def telegram():
+#     token=config('TOKEN')
+#     base_url=f"https://api.telegram.org/bot{token}"
+#     lotto = random.sample(range(1,47),6)
+
+#     chat_id = res['result'][0]['message']['chat']['id']
+#     send_url=f'/sendMessage?chat_id={chat_id}&text={lotto}'
+#     res =requests.get(base_url).json()
+#     # print(lotto)
+#     # res = requests.get(f'{base_url}/getUpdates').json()
+#     # print(chat_id)
+#     pprint(res)
+
+#     return ''
+
 @app.route('/chat')
 def chat():
     return render_template('chat.html')
@@ -26,24 +42,17 @@ def send_msg():
     response = requests.get(base_url+send_url)
     #보낼때
     return "보내기 완료"
+@app.route('/',methods=['POST'])
+def tel_web():
+    
+    req = request.get_json().get('message')
 
-@app.route('/telegram')
-def telegram():
-    token=config('TOKEN')
-    base_url=f"https://api.telegram.org/bot{token}"
-    lotto = random.sample(range(1,47),6)
+    if req is not None:
+        chat_id = req.get('chat').get('id')
+        text = req.get('text')
 
-    chat_id = res['result'][0]['message']['chat']['id']
-    send_url=f'/sendMessage?chat_id={chat_id}&text={lotto}'
-    res =requests.get(base_url).json()
-    # print(lotto)
-
-    # res = requests.get(f'{base_url}/getUpdates').json()
-    # print(chat_id)
-    pprint(res)
-
-    return ''
-
+    print(chat_id,text)
+    return '', 200 
 
 
 if __name__=="__main__":
