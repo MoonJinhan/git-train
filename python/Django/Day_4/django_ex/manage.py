@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+#장고의 여러 실행어 들을위해서 사용
 """Django's command-line utility for administrative tasks."""
 import os
 import sys

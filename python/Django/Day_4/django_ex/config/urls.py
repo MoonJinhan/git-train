@@ -15,7 +15,23 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from pages import views
+#pages 에 있는 views를 가지고 오는것.
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', views.index),
+    # path('<int:age>/',views.age),
+    path('<int:Squared>/',views.Squared),
+    path('plus/<int:num1>/<int:num2>',views.cal),
+    path('profile/<str:name>/<int:age>',views.profile),
+    path('indian/<str:name>',views.indian),
+    path('lotto/', views.lotto ),
+    path('job/<str:name>',views.job),
+    path('image/',views.image),
+    path('dtl/',views.dtl),
+    path('birthday/',views.birthday),
 ]
+
+
+#집배원과 같은 역할

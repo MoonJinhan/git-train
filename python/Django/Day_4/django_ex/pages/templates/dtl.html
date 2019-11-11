@@ -1,0 +1,77 @@
+<!--  -->
+<h3>1. 반복문</h3>
+{% for f in foods %}
+    <p>{{ f }}</p>
+{% endfor %}
+<hr>
+{% for f in foods %}
+<p>{{ forloop.counter}}.{{f}}</p>
+{% endfor %}
+<hr>
+{%  for user in empty_list %}
+    <p>{{ user }}</p>
+    <!-- empty : for 태그안에 아무것도 없을때 및에 설정된 값이 ㄹ 력굄. -->
+ {% empty %} 
+    <P> 현재 가입한 유저가 없습니다. </P>
+{% endfor %}
+
+<h3>2.조건문</h3>
+
+<h3>???</h3>
+<h3>lorm ipsum</h3>
+{% lorem %}
+<h3>lorm ipsum2</h3>
+{% lorem 3 w %}
+<h3>lorm ipsum3</h3>
+{% lorem 4 w random %}
+<h3>lorm ipsum</h3>
+{% lorem 2 p %}
+<hr>
+
+<h3>4. length filter 활용</h3>
+{% for message in messages %}
+    {% if message|length > 5 %}
+        <p>글씨가 너무 밀거요</p>
+    {% endif %}}
+        <p>{{ message }},{{ message|length }}</p>
+
+{% endfor %}
+<hr>
+
+<h3>5. 글자수 제한(truncate)</h3>
+<p></p>
+<p>{{ my_sentence|truncatewords:3 }} 단어 단위로 글자제한</p>
+<p>{{ my_sentence|truncatewords:5 }} 단어 단위로 글자제한</p>
+<p>{{ my_sentence|truncatewords:10 }} 단어 단위로 글자제한</p>
+<hr>
+
+<h3>6.글자 관련 필터</h3>
+<p>{{ 'abc'|length}}</p>
+<p>{{ 'AB'|lower}}</p>
+<p>{{ my_sentence|title }}</p>
+<p>{{ foods|random }}</p>
+<hr>
+
+<h3>7. 연산</h3>
+<p>{{ 4|add:6}}</p>
+<hr>
+
+<h3>8. 날짜표현</h3>
+<p>{{ timenow }}</p>
+<p>{% now "DATETIME_FORMAT" %}</p>
+<p>{% now "SHORT_DATETIME_FORMAT" %}</p>
+<p>{% now "DATA_FORMAT" %}</p>
+<hr>
+
+{% now "Y년 m월 d일 (D) h:i" %}
+<hr>
+
+{% now "Y" as current_year %}
+Copyright {{ current_year }}
+
+<hr>
+{{ timenow|date:"SHORT_DATETIME_FORMAT" }}
+
+<hr>
+<h3>9. 하이퍼 링크</h3>
+{{ 'google.com'|urlize }}
