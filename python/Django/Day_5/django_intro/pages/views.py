@@ -29,5 +29,12 @@ def lottoresult(request):
     count=int(request.GET.get('count')) #형병환 해주는 코드
     lotto_num=[]
     for i in range(count):
-        lotto_num.append(random.sample)
+        lotto_num.append(random.sample(range(1,46), 6)) #랜덤한 로또번호 추출해서 넣어준다.
+    context = {
+        'count' : count ,
+        'lotto' : lotto_num
+    }
+    return render(request, "pages/result.html", context)
+
+    
 
