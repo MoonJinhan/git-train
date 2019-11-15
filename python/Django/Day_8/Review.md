@@ -39,7 +39,14 @@ $ django-admin startproject config .
 ```
 
 ```python
+config폴더의 
+from django.contrib import admin
 from django.urls import path, include
+urlpatterns = [
+    path('crud/',include('crud.urls')),
+    path('admin/', admin.site.urls),
+]
+
 $ python manage.py startapp crud
 ```
 
