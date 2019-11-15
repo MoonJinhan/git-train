@@ -11,6 +11,17 @@ class Boards(models.Model):
 
     def __str__(self):
         return f'{self.id} : {self.title}'
-    #make 마이크래이션을 해줄 필요가 없다. 왜냐하면 ㅅ
+    #make 마이크래이션을 해줄 필요가 없다. 왜냐하면
 
+class Subway(models.Model):
+    name = models.CharField(max_length=10)
+    date = models.DateField()
+    sandwitch = models.CharField(max_length=15)
+    size = models.IntegerField()
+    bread = models.CharField(max_length=15)
+    source = models.CharField(max_length=10)
+
+    def __str__(self):
+        return f'{self.name} : {self.date} : {self.sandwitch} : {self.size} : {self.bread} : {self.source}'
+    
 
