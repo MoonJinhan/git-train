@@ -59,12 +59,20 @@ def revise(request,pk):
     article = Article.objects.get(pk=pk)
     title = request.POST.get('title')
     content = request.POST.get('content')
-
+    print(title)
     article.title = title
     article.content = content
 
     article.save()
-    return redirect(f'/crud/{article.id}/detail/')
+    return redirect(f'/crud/{article.id}/article/')\
+
+def delete(request,pk):
+
+    article = Article.objects.get(pk=pk)
+    article.delete()
+
+    return redirect('/crud/')
+
 
 
 

@@ -9,5 +9,7 @@ urlpatterns = [
     #crud/pk/update/ 수집 체이지
     path('<int:pk>/update/',views.update),
     path('<int:pk>/revise/',views.revise),
+    #crud/pk/delete/ 삭제하기
+    path('<int:pk>/delete/',views.delete),
     ]
 
