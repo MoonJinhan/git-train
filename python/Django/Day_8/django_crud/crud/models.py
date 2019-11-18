@@ -8,5 +8,6 @@ class Article(models.Model):
 
     def __str__(self):
         return f'{self.id}:{self.title}'
+        #어떤 값이 들어간지 알려주는 코드
 
 # Create your models here.
