@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% block body %}
+<form action='{% url "subway:new" %}' method='POST'>
+    {% csrf_token %}
+    <div>
+        주문자명:  <input type="text" name="name"><br>
+    </div>
+    <hr>
+    <div>
+        주소: <input type="text" name="address"><br>
+    </div>
+    <hr>
+    <div>
+        번호: <input type="tel" name="phone"><br>
+    </div>
+    <hr>
+    메뉴:
+    <div>
+        <select name="menu">
+            <option value="치킨데리야끼">치킨데리야끼</option>
+            <option value="이탈리안 BMT">이탈리안 BMT</option>
+            <option value="로스트 치킨">로스트 치킨</option>
+            <option value="서브웨이 클럽">서브웨이 클럽</option>
+            <option value="참치">참치</option>
+        </select>
+    </div>
+    
+    <div>
+        빵
+        <input type="radio" name="bread" value="위트">위트
+        <input type="radio" name="bread" value="허니오트">허니오트
+        <input type="radio" name="bread" value="파마산">파마산
+        <input type="radio" name="bread" value="플렛">플렛
+        
+    </div>
+    <div>
+    소스
+        <input type="checkbox" name='source' value="사우전드">사우전드
+        <input type="checkbox" name='source' value="마요네즈">마요네즈
+        <input type="checkbox" name='source' value="딸기잼">딸기잼
+        <input type="checkbox" name='source' value="허니머스타드">허니머스타드
+        <input type="checkbox" name='source' value="포도잼">포도잼
+    </div>
+    <div>
+        야채
+            <input type="checkbox" name='source' value="양배추">양배추
+            <input type="checkbox" name='source' value="토마토">토마토
+            <input type="checkbox" name='source' value="오이">오이
+            <input type="checkbox" name='source' value="피망">피망
+            <input type="checkbox" name='source' value="양파">양파
+        </div>
+    
+    <div>
+        음료
+        <input type="radio" name="drink" value="사이다">사이다
+        <input type="radio" name="drink" value="콜라">콜라
+        <input type="radio" name="drink" value="환타">환타
+        <input type="radio" name="drink" value="웰치스">웰치스
+    </div>
+
+    <input type="submit" value="주문하기">
+</form>
+{% endblock %}

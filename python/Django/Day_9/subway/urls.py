@@ -10,14 +10,18 @@ urlpatterns =[
     #template 에서는 (% url 'app_name:설정' %)
     #url이 바뀌어도 일일이 찾아서 바꿀 필요가 없다.
 
-    path('/',views.index,name='index'),
-    path('name/',views.name,name='name'),
-    path('creat/',views.creat,name='creat'),
+    path('',views.index,name='index'),
+    path('new/',views.new,name='new'),
+    #path('create/',views.creat,name='create'),
     # redirect('app_name:설정name' 넘길 id)
     #(% url'설정name' 넘길 id %)
-    path('detail/<int:id>',views.detail,name='detail'),
-    path('edit/<int:id>',views.edit,name='edit'),
-    path('update/<int:id>',views.update,name='update'),
-    path('delete/<int:id>',views.delete,name='delete'),
+    path('detail/<int:art_id>',views.detail,name='detail'),
+    path('edit/<int:art_id>',views.edit,name='edit'),
+   
+    # REST 이용으로 update부분 필요 없음. POST edit/id 이용.
+    #path('update/<int:art_id>',views.update,name='update'),
+    path('delete/<int:art_id>',views.delete,name='delete'),
+    
+    #path('<int:art_id>/comment/',views.comment,name='commment'),
 
 ]

@@ -1,8 +1,33 @@
 {% extends 'base.html' %}
 {% block body %}
-    제목 :{{ article.title }}<br>
-    내용 :{{ article.content }}<br>
+    제목 :{{ art.title }}<br>
+    내용 :{{ art.content }}<br>
 
-    <a href="/crud/{{ article.id }}/update/">수정하기</a>
-    <a href="/crud/{{ article.id }}/delete/">삭제하기</a>
+    <a href="{% url 'crud:update' art.id %}">수정하기</a>
+    <form action='{% url "crud:delete" art.id %}' method='POST'>
+        {% csrf_token %}
+        <input type='submit' value="삭제하기">
+    </form>
 {% endblock %}
+
+    <!-- <a href="/crud/{#{ article.id }}/update/">수정하기</a>
+    <hr>
+   
+    <a href="/crud/{#{ article.id }}/delete/">삭제하기</a>
+    <form action="(#% url 'curd:comment' art.id %)" method="POST">
+        {#% csrf_token %}
+        댓글 달기: <input type="text" name="comment">
+        <input type="submit">
+
+    </form>
+    {#% endblock %} -->
+    <!-- <hr><br>
+    <div>
+        (#% for com in art.commnet_set.all %)
+        <li>
+            {#{com.comment}}
+            <a href="{#% url 'curd:comment_up' %}">수정하기</a>
+            <form action='{#% url "crud:comment_del" art.id com.id %}'></form>
+        </li>
+        {#% endfor %}
+    </div> -->

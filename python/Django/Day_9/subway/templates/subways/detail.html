@@ -6,8 +6,12 @@
     메뉴 : {{sub.menu}}<br>
 
     주문사람:
-    {{sub.bread}} /소스 채소 마실것
+    {{ sub.bread }} / {{ sub.source }}<br>
+    {{ sub.vegetable }} / {{ sub.drink }}<br>
 
-    <a href="(%'url','crud:update'art.id %)' >수정하기</a>
-    <a href="/subway/delete{{sub.id}}" sub.id >삭제하기</a>
+    <a href="(%'url','subway:edit' sub.id %)" >수정하기</a>
+    <form action='{% url "subway:delete" sub.id %}' method='POST'>
+        {% csrf_token %}
+        <input type="submit" value="삭제하기">
+    </form>
 {% endblock %}

@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 {% block body %}
-    <form action='/crud/{{ article.id }}/revise/' method='POST' >
+    <form action='{% url "crud:update" art.id %}' method='POST' >
         {% csrf_token %}
-        <input type="text" name="title" value="{{ article.title }}"><br>
-        <textarea name="content" cols="30" rows="10">{{ article.content }}</textarea><br>
+        <input type="text" name="title" value="{{ art.title }}"><br>
+        <textarea name="content" cols="30" rows="10">{{ art.content }}</textarea><br>
         <input type = 'submit'>
     </form>
 {% endblock %}

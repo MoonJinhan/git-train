@@ -5,7 +5,7 @@
 </h1>
 <ul>
     {% for art in articles %}
-    <li> <a href="/crud/{{ art.pk }}/article/"> {{ art.title }} </a></li>
+    <li> <a href="{% url 'crud:detail' art.id %}"> {{ art.title }} </a></li>
     {% endfor %}
 </ul>
 {% endblock %}
