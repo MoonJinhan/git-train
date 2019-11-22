@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block body %}
+    <p>Tile : {{ article.title }}</p>
+    <p>CONTENT : {{ article.content }}</p>
+    <a href="{% url 'article:edit' article.id %}">수정하기</a>
+    <form action="{% url 'article:delete' %}" method = "POST">
+        
+            {% csrf_token %}
+            <a href="#" onclick="this.parentNode.submit()"></a>
+    </form>
+{% endblock %}
