@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'prac_form',
     'article',
     'django.contrib.admin',
     'django.contrib.auth',

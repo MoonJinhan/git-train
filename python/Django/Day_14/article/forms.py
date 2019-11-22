@@ -1,16 +1,16 @@
 from django import forms
 
-check_box = [
-    #(인풋, 아웃풋)
-    ('one',"하나"),
-    ('two',"둘"),
-    ('three',"셋"),
-]
-MONTH_EN=[]
+# check_box = [
+#     #(인풋, 아웃풋)
+#     ('one',"하나"),
+#     ('two',"둘"),
+#     ('three',"셋"),
+# ]
+# MONTH_EN=[]
 
-    1:('JAN'),2:('FEB'),3:('MAR'),4:('APR'),5:('MAY'),6:('JUN'),7:('JUL'),8('AGU')
+#     1:('JAN'),2:('FEB'),3:('MAR'),4:('APR'),5:('MAY'),6:('JUN'),7:('JUL'),8('AGU')
     
-    ]  
+#     ]  
 class ArticleForm(forms.Form):
     title = forms.CharField()
     content = forms.CharField(max_length=5,help_text="5자리만 입력하세요.")
@@ -36,9 +36,9 @@ class ArticleForm(forms.Form):
     #         years=range(1990,2020),
     #         MONTH_EN
     #     )      
-    )
+#     # )
         
-class Authorform(forms.ModelForm):
-    class Meta: 
-        model =Author
-        field=['name','company']
+# class Authorform(forms.ModelForm):
+#     class Meta: 
+#         model =Author
+#         field=['name','company']
