@@ -12,8 +12,12 @@
     {% if user.is_authenticated %}
     <div calss ='container'>
         <h3>안녕하세요. {{ user.username }}</h3>
-        <a href="{% url 'accounts:edit' %}", method="POST">정보 수정</a>
-        <form action="{% url 'accounts:logout' %}", method="POST">로그아웃</a>
+        <a href="{% url 'accounts:edit' %}" method="POST">정보 수정</a>
+        <form action='{% url "accounts:logout" %}' method='POST' >
+            {% csrf_token %}
+            <a href="#" onclick="this.parentNode.submit()">로그아웃</a>
+           
+        </form>
     {% endif %}
     {% block body %}
     {% endblock %}
