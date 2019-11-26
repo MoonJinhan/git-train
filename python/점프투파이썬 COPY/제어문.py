@@ -1,3 +1,68 @@
+#<for>
+# test =['one','two','three']
+# for i in test:
+#     print(i)
+
+
+# a = [(1,2),(3,4),(5,6)]
+# for (first,last) in a :
+#     print(first+last)
+
+#Q. "총 5명의 학생이 시험을 보았는데 시험 점수가 60점이 넘으면 합격이고 그렇지 않으면 불합격이다. 
+# 합격인지 불합격인지 결과를 보여 주시오."
+
+# score=[90,25,67,45,80]
+# num=0
+# for i in score:
+#     num = num+1
+#     if i < 60:
+#         continue
+#     print("%d번 학생 축하하빈다. 합격입니다." %num)
+        
+
+
+#원래 답
+
+# marks = [90, 25, 67, 45, 80]
+
+# number = 0 
+# for mark in marks: 
+#     number = number +1 
+#     if mark >= 60: 
+#         print("%d번 학생은 합격입니다." % number)
+#     else: 
+#         print("%d번 학생은 불합격입니다." % number)
+
+# #<range 함수>
+# add = 0 
+# for i in range(1,11):
+#     add = add+i
+
+# print(add)
+#Q2 . for와 range 함수를 사용하면 소스 코드 단 4줄만으로 구구단을 출력할 수 있다. 
+# 들여쓰기에 주의하며 입력해 보자
+# num =1
+# for i in range(1,10):
+#     num = num +1
+#     print("%d * %d = %d",  % num,% i,% num*i)
+
+# for i in range(2,10):
+#     for j in range(1,10):
+#         print(i*j,end='')
+#     #print('')
+
+#리스트 내포하기
+# a =[1,2,3,4]
+# result=[]
+# for num in a:
+#     result.append(num*2)
+# print(result)
+
+a =[1,2,3,4]
+result=[num*2 for num in a]
+
+print(result)
+
 #<while>
 # tree = 0
 # while tree <10:
@@ -47,22 +112,22 @@
 
 #<answer>
 
-coffee = 10
-while True:
+# coffee = 10
+# while True:
     
-    money = int(input("돈을 넣어 주세요.:  "))
-    if money == 300:
-        print("커피를 줍닏나.")
-        coffee = coffee-1
-    elif money>300:
-        print("거스름돈 %d를 주고 커피를 줍니다." %(money-300))
-        coffee=coffee-1
-    else:
-        print("돈을 다시 돌려주고 커피를 주지 않습니다.")
-        print("남은 커피의 양은 %d개 입니다." % coffee)
-    if coffee ==0:
-        print("커피가 다떨어졌습니다. 판매를 중지합니다.")
-        break
+#     money = int(input("돈을 넣어 주세요.:  "))
+#     if money == 300:
+#         print("커피를 줍닏나.")
+#         coffee = coffee-1
+#     elif money>300:
+#         print("거스름돈 %d를 주고 커피를 줍니다." %(money-300))
+#         coffee=coffee-1
+#     else:
+#         print("돈을 다시 돌려주고 커피를 주지 않습니다.")
+#         print("남은 커피의 양은 %d개 입니다." % coffee)
+#     if coffee ==0:
+#         print("커피가 다떨어졌습니다. 판매를 중지합니다.")
+#         break
             
 #<<<<if>>>>
 # m =True
