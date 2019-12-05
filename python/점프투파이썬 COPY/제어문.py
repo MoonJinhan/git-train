@@ -14,14 +14,55 @@
 # shirt
 
 #Q2 while문을 사용해 1부터 1000까지의 자연수 중 3의 배수의 합을 구해 보자.
-result=0
-num=1
-while num<=1000:
-    if num % 3 == 0:
-        result += num
-    num += 1
+# result=0
+# num=1
+# while num<=1000:
+#     if num % 3 == 0:
+#         result += num
+#     num += 1
     
-print(result)
+# print(result)
+
+
+# result = 0
+# num=1
+# while num<=1000:
+#     if num%3==0:
+#         result += num
+#     else:
+#         num += 1
+    
+# print(result)
+
+
+#Q3while문을 사용하여 다음과 같이 별(*)을 표시하는 프로그램을 작성해 보자.
+# x = '*'
+# result = []
+# num=1
+# while num<=5:
+#     result.append(x*num)
+#     num = num+1
+
+# print(result)
+
+# i = 0
+# while True:
+#     i += 1 # while문 수행 시 1씩 증가
+#     if i > 5: break     # i 값이 5이상이면 while문을 벗어난다.
+#     print ('*' * i)
+#Q$
+# for i in range(1,101):
+#     print(i)
+
+# a = [70,60,55,75,95,90,80,85,100]
+# result = 0
+# for i in a:
+#     result += i
+
+# print(result/len(a))
+# numbers = [1, 2, 3, 4, 5]
+# result = [n*2 for n in numbers if n%2==1]
+# print(result)
 #<for>
 # test =['one','two','three']
 # for i in test:
@@ -82,10 +123,10 @@ print(result)
 #     result.append(num*2)
 # print(result)
 
-a =[1,2,3,4]
-result=[num*2 for num in a]
+# a =[1,2,3,4]
+# result=[num*2 for num in a]
 
-print(result)
+# print(result)
 
 #<while>
 # tree = 0
