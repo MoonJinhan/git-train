@@ -46,12 +46,19 @@
 # print(kwargs(a=1))
 # print(kwargs(name='foo',age=3))
 
-def add_and_mul(a,b):
-    return a+b,a*b
+# def add_and_mul(a,b):
+#     return a+b,a*b
 
-result = add_and_mul(3,4)
-print(result)
+# result = add_and_mul(3,4)
+# print(result)
 
-result1, result2 = add_and_mul(3, 4)
-print(result1)
-print(result2)
+# result1, result2 = add_and_mul(3, 4)
+# print(result1)
+# print(result2)
+
+a = 1
+def vartest(a):
+    a = a +1
+    return a
+print(vartest(3))
+print(a)
