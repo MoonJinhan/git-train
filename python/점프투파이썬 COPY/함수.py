@@ -56,9 +56,41 @@
 # print(result1)
 # print(result2)
 
-a = 1
-def vartest(a):
-    a = a +1
-    return a
-print(vartest(3))
-print(a)
+# a = 1
+# def vartest(a):
+#     a = a +1
+#     return a
+# print(vartest(3))
+# print(a)
+
+# a = input('앵무새 입니다.')
+
+# print(a)
+
+# print("life","is","too short") 
+
+# for i in range(10):
+#     print(i,end=' ')
+
+# f = open('C:/Users/user/Documents/DocFile_Programming_note/python/점프투파이썬 COPY/test_2.txt','r')
+
+# while True:
+#     line = f.readline()
+#     if not line: break
+#     print(line)
+# f.close()
+# f = open('test_2.txt','w')
+# for i in range(1,11):
+#     data = "%d번째 줄 입니다.\n" % i
+#     f.write(data)
+# f.close()
+
+# for i in range(1,11):
+#     data="%d번째 줄입니다.\n" % i
+#     print(data)
+
+f = open("C:/Users/user/Documents/DocFile_Programming_note/python/점프투파이썬 COPY/test_2.txt", 'r')
+lines = f.readlines()
+for line in lines:
+    print(line)
+f.close()
