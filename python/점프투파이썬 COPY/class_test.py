@@ -1,46 +1,87 @@
-# #클래스 
+# # #클래스 
 
-# class Cookie:
-#     pass
+# # class Cookie:
+# #     pass
 
-# a=Cookie()
-# b=Cookie()
+# # a=Cookie()
+# # b=Cookie()
 
-# print(a)
-# print(b)
+# # print(a)
+# # print(b)
 
-class FourCal:
-    #1차(구조)
-    # 클래스 명의 맨 앞자리는 대문자로 해 주는 것이 개발자 끼리의 약속이라고 한다.
+# class FourCal:
+#     #1차(구조)
+#     # 클래스 명의 맨 앞자리는 대문자로 해 주는 것이 개발자 끼리의 약속이라고 한다.
 
-    # pass
-    #///////////////////////////////////////
-    #2차 객체생성
-    def setdata(self,first,second):
+#     # pass
+#     #///////////////////////////////////////
+#     #2차 객체생성
+#     def setdata(self,first,second):
     
-    #setdata 함수를 만들었다. 클래스 안에 구현된 함수는 다른 말로 메서드(Method)라고 부른다.
+#     #setdata 함수를 만들었다. 클래스 안에 구현된 함수는 다른 말로 메서드(Method)라고 부른다.
 
-        self.first = first
-        self.second = second
+#         self.first = first
+#         self.second = second
 
 
 
-    # def setdata(self, first, second):   # ① 메서드의 매개변수
-    # self.first = first              # ② 메서드의 수행문
-    # self.second = second            # ② 메서드의 수행문
+#     # def setdata(self, first, second):   # ① 메서드의 매개변수
+#     # self.first = first              # ② 메서드의 수행문
+#     # self.second = second            # ② 메서드의 수행문
 
-    def add(self): #더하기 기능
-        result = self.first + self.second
-        return result
-#1차 구조 Fourcal의 인스턴스
-a=FourCal()
-# print(type(a))
+#     def add(self): #더하기 기능
+#         result = self.first + self.second
+#         return result
 
-a.setdata(4,2)
+#     def div(self):
+#         result = self.first / self.second
+#         return result
+         
+        
+# #1차 구조 Fourcal의 인스턴스
+# # a=FourCal()
+# # print(type(a))
 
-#이제 a객체에서 메소 setdata를 통해서 4,2가 들어간다. 
-# 확인 : print(a.first)
+# # a.setdata(4,2)
 
-print(a.add())
+# #이제 a객체에서 메소 setdata를 통해서 4,2가 들어간다. 
+# # 확인 : print(a.first)
 
-# 나머지는 .. pass
+# # print(a.add())
+
+# # 나머지는 .. pass
+
+# class MoreFourCal(FourCal):
+
+#     def pow(self):
+#         result = self.first ** self.second
+#         return result
+
+#     def div(self):
+#         if self.second == 0:
+#             return 0
+#         else:
+#             return self.first / self.second
+
+# b = MoreFourCal()
+
+# b.setdata(4,0)
+
+# print(b.div())
+
+# # print(b.pow())
+
+# a=FourCal()
+# a.setdata(4,0)
+
+# 클래스 변수
+ 
+class Family:
+    lastname = '박'
+
+# print(Family.lastname)
+a = Family()
+b = Family()
+
+print(a.lastname)
+print(b.lastname)
