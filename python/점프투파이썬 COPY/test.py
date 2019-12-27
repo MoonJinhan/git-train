@@ -124,7 +124,11 @@
 # print(mod1.add(3,4))
 # print(mod1.sub(4,3))
 
-from moduel_test import add
+import moduel_test as mod1
 
-print(add(2,3))
-print(sub(3,2))
+print(mod1.add(2,3))
+print(mod1.PI)
+
+a = mod1.Math()
+print(a.solv(2))
+print(mod1.solv(2))
