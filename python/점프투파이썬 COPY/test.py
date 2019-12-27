@@ -60,14 +60,14 @@
 # print(a.pop('B'))
 
 #Q11 a 리스트에서 중복 숫자를 제거해 보자.
-a = [1, 1, 1, 2, 2, 3, 3, 3, 4, 4, 5]
-a.remove(1)
-a.remove(1)
-a.remove(2)
-a.remove(3)
-a.remove(3)
-a.remove(4)
-print(a)
+# a = [1, 1, 1, 2, 2, 3, 3, 3, 4, 4, 5]
+# a.remove(1)
+# a.remove(1)
+# a.remove(2)
+# a.remove(3)
+# a.remove(3)
+# a.remove(4)
+# print(a)
 
 #Q12
 #<<<<변수>>>>
@@ -119,3 +119,12 @@ print(a)
 
 # print(l2[0])
 
+# import moduel_test as mod1
+
+# print(mod1.add(3,4))
+# print(mod1.sub(4,3))
+
+from moduel_test import add
+
+print(add(2,3))
+print(sub(3,2))
