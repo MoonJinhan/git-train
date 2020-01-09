@@ -19,3 +19,35 @@
 
 # print(dir([1,2,3]))
 
+# print(divmod(7,3))
+# 7/3 = 2 나머지 1 출력
+# (2, 1)
+
+# for i, name in enumerate(['body','foo','bar']):
+#     print(i,name)
+
+# 0 body
+# 1 foo
+# 2 bar
+
+# enumerate 는 열거하다라는 뜻을 가지고 있다. 이 함수는 순서가 있는 자료형(리스트 튜플 문자열)
+# 을 입력으로 받아 인덱스값을 포함하는 enumerate 객체를 돌려준다. enumerate 함수는 
+# 일반적으로 for 문과 같이 사용한다.
+
+# 장점 : 자료형의 현재 순서(index)와 그 값을 쉽게 알 수 있다. -> 위치 확인에 용의
+
+# print(eval('1+2'))
+# 3
+# eval(expression )은 실행 가능한 문자열을 입력으로 받아 문자열을 실행한 결괏값을 돌려주는 함수이다.
+
+# print(type(eval("'hi'+'i'")))
+# print('hi'+'A')
+
+# hii
+# <class 'str'>
+# hiA
+
+# 문자끼리 더할 때는 같은 역할을 한다. 
+#  eval은 입력받은 문자열로 파이썬 함수나 클래스를 동적으로 실행하고 싶을 때 사용한다.
+
+
