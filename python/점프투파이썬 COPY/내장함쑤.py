@@ -50,4 +50,46 @@
 # 문자끼리 더할 때는 같은 역할을 한다. 
 #  eval은 입력받은 문자열로 파이썬 함수나 클래스를 동적으로 실행하고 싶을 때 사용한다.
 
+# def positive(l):
+#     result = []
+#     for i in l:
+#         if i > 0:
+#             result.append(i)
+  
+            
+#     return result
 
+# print(positive([1,-3,2,0,-5,6]))
+
+# 위의 함수를 통해서 우리는 양수의 수만 출력할 수 있다.
+
+# filter 함수는 첫 번째 인수로 함수 이름을, 
+# 두 번째 인수로 그 함수에 차례로 들어갈 반복 가능한 자료형을 받는다. 
+# 그리고 두 번째 인수인 반복 가능한 자료형 요소가 첫 번째 인수인 함수에 입력되었을 때 
+# 반환 값이 참인 것만 묶어서(걸러 내서) 돌려준다.
+
+# def positive(x):
+#     return x>0
+# print(list(filter(positive, [1,-3,2,0,-5,6])))
+
+# 식: filter(함수 이름 ,[리스트 형의 입력])
+#위의 함수에서 사용한 것 처럼 길게 함수를 쓸 필요가 없다. 
+
+# print(hex(265))
+# 0x109
+
+# a = input()
+
+# print(int('3'))
+
+# int는 어떤 형태든 정수로 반환한다.
+
+# class Person: pass
+
+# a = Person()
+# print(isinstance(a,Person))
+
+# True
+# b = Person()
+# print(isinstance(b,Person))
+# ???
