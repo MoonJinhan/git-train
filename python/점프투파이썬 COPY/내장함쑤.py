@@ -93,3 +93,24 @@
 # b = Person()
 # print(isinstance(b,Person))
 # ???
+
+# map(f,iterable)  f = 함수 , iterable = 반복가능한 자료형
+#map 은 입력받은 자료형의 각요소를 함수 f가 수행한 결과를 묶어서
+
+# def two_times(numberList):
+#     result = []
+#     for number in numberList:
+#         result.append(number*2)
+#     return result
+
+# result = two_times([1,2,3,4])
+# print(result)
+
+# def two_times(x):
+#     return x*2
+
+# print(list(filter(two_times,[1,2,3,4])))    
+# print(list(map(two_times,[1,2,3,4])))
+
+# 순간적으로 맵과 필터의 차이가 무엇인가? 아리송해서 찾아보았다. 나만 그런 것이 아닌가보다.
+#예: https://wikidocs.net/22803
